@@ -1,0 +1,22 @@
+<div class="sidebar">
+    <header class="logo">
+        <svg class="logo-img">
+            <use href="./assets/icons/logo.svg#img"></use>
+        </svg>
+        <h1 class="title">Sphere</h1>
+    </header>
+
+    <main class="menu">
+        @for (item of itemsMenu; track $index) {
+        <a class="item" [routerLink]="item.router" routerLinkActive="active">
+            <svg class="icon">
+                <use [attr.xlink:href]="item.icon + '#img'" [attr.href]="item.icon + '#img'"></use>
+            </svg>
+
+            <span>{{item.title}}</span>
+        </a>
+        }
+
+
+    </main>
+</div>
