@@ -4,8 +4,35 @@
             @for (movie of topMovies; track $index) {
             <div class="swiper-slide" [style]="{
                 'background-image':'url(https://image.tmdb.org/t/p/w500' + movie.backdrop_path + ')'}">
+                <div class="contain-info">
+                    <h6 class="title">{{movie.title}}</h6>
+
+                    <div class="genres">
+                        @for (genre of movie.genres; track $index) {
+                        <span class="genre badge text-bg-secondary">{{genre}}</span>
+                        }
+                    </div>
+
+                    <button type="button" class="btn btn-primary">
+                        <svg class="icon-btn">
+                            <use href="./assets/icons/detail.svg#img"></use>
+                        </svg>
+                        Ver más
+                    </button>
+                </div>
             </div>
             }
         </div>
     </div>
+
+    <section class="movies row">
+        @for (movie of topRatedMovies; track $index) {
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="movie" [style]="{
+                    'background-image':'url(https://image.tmdb.org/t/p/w500' + movie.poster_path + ')'}">
+
+            </div>
+        </div>
+        }
+    </section>
 </section>

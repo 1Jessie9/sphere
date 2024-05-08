@@ -1,4 +1,16 @@
 :root {
-    --color-primary: #8e36a4;
-    --color-primary-contrast: #fefdfe;
+    --color-primary: #a1397d;
+    --color-light: #e7e2dc;
+    --color-dark: #e7e2dc;
 }
+
+$theme-colors: (
+    "light":      #e7e2dc,
+    "dark":       #000034,
+    "primary":    #a1397d,
+    "secondary":  #403a6c,
+    "info":       #fcb69c,
+    "success":    #13a764,
+    "warning":    #e1cc13,
+    "danger":     #f02308,
+);
